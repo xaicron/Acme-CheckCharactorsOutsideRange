@@ -2,7 +2,8 @@ use inc::Module::Install;
 name 'Acme-CheckCharactorsOutsideRange';
 all_from 'lib/Acme/CheckCharactorsOutsideRange.pm';
 
-# requires '';
+requires 'Filter::Util::Call';
+requires 'PPI';
 
 tests 't/*.t t/*/*.t t/*/*/*.t t/*/*/*/*.t t/*/*/*/*/*.t';
 author_tests 'xt';
