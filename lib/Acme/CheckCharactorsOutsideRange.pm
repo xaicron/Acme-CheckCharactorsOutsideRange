@@ -18,7 +18,6 @@ sub import {
     $encoder = ref($encoder) =~ /Encode::/ ? $encoder : find_encoding $encoder;
     
     my ($file, $line) = (caller(0))[1, 2];
-    warn $file;
     
     Filter::Util::Call::filter_add(sub {
         my $status;
